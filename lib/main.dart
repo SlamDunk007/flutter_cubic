@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_cubic/round_pillar_widget.dart';
+import 'package:flutter_cubic/toast_widget.dart';
 
 import 'cubic_line_widget.dart';
 
@@ -45,7 +46,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 _buildRoudPillarWidget(context),
                 _buildCubicWidget(context)
               ],
-            )
+            ),
+            OutlineButton(onPressed: (){
+              Toast.show("普通toast", context);
+            }, child: Text("toast"))
           ],
         ));
   }
